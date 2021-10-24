@@ -43,7 +43,7 @@ public class TheArcher extends CustomPlayer {
 
     public static class Enums {
         @SpireEnum
-        public static AbstractPlayer.PlayerClass THE_FALLEN;
+        public static AbstractPlayer.PlayerClass THE_ARCHER;
         @SpireEnum(name = "ARCHER_ORANGE_COLOR") // These two HAVE to have the same absolutely identical name.
         public static AbstractCard.CardColor COLOR_ORANGE;
         @SpireEnum(name = "ARCHER_ORANGE_COLOR") @SuppressWarnings("unused")

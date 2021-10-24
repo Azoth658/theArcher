@@ -2,7 +2,6 @@ package theArcher;
 
 import basemod.*;
 import basemod.eventUtil.AddEventParams;
-import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -19,16 +18,10 @@ import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theArcher.cards.*;
 import theArcher.events.IdentityCrisisEvent;
-import theArcher.potions.PlaceholderPotion;
-import theArcher.relics.BottledPlaceholderRelic;
-import theArcher.relics.DefaultClickableRelic;
-import theArcher.relics.PlaceholderRelic;
-import theArcher.relics.PlaceholderRelic2;
 import theArcher.util.IDCheckDontTouchPls;
 import theArcher.util.TextureLoader;
 import theArcher.variables.DefaultCustomVariable;
@@ -281,13 +274,13 @@ public class TheArcher implements
     
     @Override
     public void receiveEditCharacters() {
-        logger.info("Beginning to edit characters. " + "Add " + theArcher.characters.TheArcher.Enums.THE_FALLEN.toString());
+        logger.info("Beginning to edit characters. " + "Add " + theArcher.characters.TheArcher.Enums.THE_ARCHER.toString());
         
-        BaseMod.addCharacter(new theArcher.characters.TheArcher("the Fallen", theArcher.characters.TheArcher.Enums.THE_FALLEN),
-                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, theArcher.characters.TheArcher.Enums.THE_FALLEN);
+        BaseMod.addCharacter(new theArcher.characters.TheArcher("theArcher", theArcher.characters.TheArcher.Enums.THE_ARCHER),
+                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, theArcher.characters.TheArcher.Enums.THE_ARCHER);
         
         receiveEditPotions();
-        logger.info("Added " + theArcher.characters.TheArcher.Enums.THE_FALLEN.toString());
+        logger.info("Added " + theArcher.characters.TheArcher.Enums.THE_ARCHER.toString());
     }
     
     // =============== /LOAD THE CHARACTER/ =================
@@ -345,7 +338,7 @@ public class TheArcher implements
         // Since this is a builder these method calls (outside of create()) can be skipped/added as necessary
         AddEventParams eventParams = new AddEventParams.Builder(IdentityCrisisEvent.ID, IdentityCrisisEvent.class) // for this specific event
             .dungeonID(TheCity.ID) // The dungeon (act) this event will appear in
-            .playerClass(theArcher.characters.TheArcher.Enums.THE_FALLEN) // Character specific event
+            .playerClass(theArcher.characters.TheArcher.Enums.THE_ARCHER) // Character specific event
             .create();
 
         // Add the event
