@@ -3,11 +3,11 @@
 
     <!--Hello! You'll basically should only need to change these names and the steam path (just below)-->
     <!--The author name(s) as they appear in MTS and any other comments are in your ModTheSpire.json-->
-    <groupId>thefallen</groupId>
-    <artifactId>TheFallen</artifactId> <!--Keep a note of this one: this is the ID used in the "auto add cards" method-->
-    <name>The Fallen</name>
+    <groupId>theArcher</groupId>
+    <artifactId>TheArcher</artifactId> <!--Keep a note of this one: this is the ID used in the "auto add cards" method-->
+    <name>The Archer</name>
     <version>0.0.1</version>
-    <description>A fallen hero, bought back through dark arts.</description>
+    <description>An archer who targets their foes and prepares their attacks before fatigue sets in.</description>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
