@@ -1,0 +1,101 @@
+{
+"theArcher:CommonPower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
+},
+"theArcher:RarePower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+
+        "theArcher:TwinShotPower": {
+                "NAME": "Twin Shot",
+                "DESCRIPTIONS": [
+                        "Your next #yShot is played twice.",
+                        "Your next ",
+                        " #yShots are played twice."
+                ]
+        },
+
+        "theArcher:FreeShotPower": {
+                "NAME": "Nocked and Loaded",
+                "DESCRIPTIONS": [
+                        "Ignore energy cost on the next #yShot card you play.",
+                        "Ignore energy cost on the next #b",
+                        " #yShot Cards you play."
+                ]
+        },
+
+        "theArcher:HalveDamagePower": {
+                "NAME": "Halve Damage",
+                "DESCRIPTIONS": [
+                        "Receive 50% less attack damage."
+                ]
+        },
+
+        "theArcher:HeldActionPower": {
+                "NAME": "Held Action",
+                "DESCRIPTIONS": ["#yPrepared cards #yRetain."]
+        },
+
+        "theArcher:MasteryFormPower": {
+                "NAME": "Mastery Form",
+                "DESCRIPTIONS": ["*Fatigue cards no longer decrement. *Prepare cards increase on use."]
+        },
+
+        "theArcher:NockedAndLoadedPower": {
+                "NAME": "Nocked and Loaded",
+                "DESCRIPTIONS": ["The first ",
+                        " shot card you play each turn is free.",
+                        " shot cards you play each turn are free."]
+        },
+
+        "theArcher:OverdrawPower": {
+                "NAME": "Over Draw",
+                "DESCRIPTIONS": ["Shot cards deal double damage."]
+        },
+
+        "theArcher:QuickReleasePower": {
+                "NAME": "Quick Release",
+                "DESCRIPTIONS": ["When you play a shot card draw #b",
+                        "shot card.",
+                        "shot cards."]
+        },
+
+        "theArcher:ReadyAndWaitingPower": {
+                "NAME": "Ready And Waiting",
+                "DESCRIPTIONS": [
+                        "Whenever a card is #yPrepared, gain #b",
+                        " #yBlock."
+                ]
+        },
+
+        "theArcher:RicochetPower": {
+                "NAME": "Ricochet Power",
+                "DESCRIPTIONS": ["Cards that target a single enemy, will target all enemies with #yTargeted."]
+        },
+
+        "theArcher:TargetedPower": {
+                "NAME": "Targeted Power",
+                "DESCRIPTIONS": [
+                        "When attacked, receives #b",
+                        " additional damage."
+                ]
+        },
+
+        "theArcher:TargetPracticePower": {
+                "NAME": "Target Practice",
+                "DESCRIPTIONS": [
+                        "#yShots deal #b",
+                        " additional damage."
+                ]
+        },
+
+        "theArcher:EmptyQuiverPower": {
+                "NAME": "Empty Quiver",
+                "DESCRIPTIONS": [
+                        "#yShots you draw cost #b0. Whenever you play a #yShot, #yExhaust it.",
+                        "Whenever you play a #yShot, #yExhaust it."
+                ]
+        }
+}

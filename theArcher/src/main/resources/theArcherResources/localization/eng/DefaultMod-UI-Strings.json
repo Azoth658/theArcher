@@ -1,0 +1,20 @@
+{
+  "theArcher:FatigueCard": {
+    "TEXT": [
+      "theArcher:Fatigue. NL ",
+      "This card is #rFatigued!",
+      "Fatigue Effect",
+      " NL (Current value: #b",
+      ")"
+    ]
+  },
+  "theArcher:PreparedCard": {
+    "TEXT": [
+      "theArcher:Prepare. NL ",
+      "This card is #rPrepared!",
+      "Prepare Effect",
+      " NL (Current value: #b",
+      ")"
+    ]
+  }
+}
