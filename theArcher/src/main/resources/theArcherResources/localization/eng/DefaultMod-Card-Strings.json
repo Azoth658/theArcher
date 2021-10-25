@@ -110,6 +110,11 @@
     "DESCRIPTION": "Deal !D! damage. Gain !B! Block."
   },
 
+  "theArcher:Cower": {
+    "NAME": "Cower",
+    "DESCRIPTION": "Lose !M! Strength. NL Gain !theArcher:SecondMagic! Dexterity."
+  },
+
   "theArcher:DuckAndCover": {
     "NAME": "Duck and Cover",
     "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak."
