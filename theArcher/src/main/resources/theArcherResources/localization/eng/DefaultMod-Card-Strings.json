@@ -233,7 +233,8 @@
 
   "theArcher:PatientShot": {
     "NAME": "Patient Shot",
-    "DESCRIPTION": "Deal damage equal to your discard pile."
+    "DESCRIPTION": "Deal damage equal to your discard pile.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to your discard pile. NL Shuffle this card into your draw pile."
   },
 
   "theArcher:Persevere": {

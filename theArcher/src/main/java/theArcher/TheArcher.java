@@ -18,10 +18,12 @@ import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theArcher.cards.*;
 import theArcher.events.IdentityCrisisEvent;
+import theArcher.relics.MagicQuiver;
 import theArcher.util.IDCheckDontTouchPls;
 import theArcher.util.TextureLoader;
 import theArcher.variables.DefaultCustomVariable;
@@ -336,13 +338,13 @@ public class TheArcher implements
 
         // Create a new event builder
         // Since this is a builder these method calls (outside of create()) can be skipped/added as necessary
-        AddEventParams eventParams = new AddEventParams.Builder(IdentityCrisisEvent.ID, IdentityCrisisEvent.class) // for this specific event
-            .dungeonID(TheCity.ID) // The dungeon (act) this event will appear in
-            .playerClass(theArcher.characters.TheArcher.Enums.THE_ARCHER) // Character specific event
-            .create();
+        //AddEventParams eventParams = new AddEventParams.Builder(IdentityCrisisEvent.ID, IdentityCrisisEvent.class) // for this specific event
+        //    .dungeonID(TheCity.ID) // The dungeon (act) this event will appear in
+        //    .playerClass(theArcher.characters.TheArcher.Enums.THE_ARCHER) // Character specific event
+        //    .create();
 
         // Add the event
-        BaseMod.addEvent(eventParams);
+        //BaseMod.addEvent(eventParams);
 
         // =============== /EVENTS/ =================
         logger.info("Done loading badge Image and mod options");
@@ -381,7 +383,7 @@ public class TheArcher implements
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
 
-        //BaseMod.addRelicToCustomPool(new PlaceholderRelic(), theArcher.characters.TheArcher.Enums.COLOR_ORANGE);
+        BaseMod.addRelicToCustomPool(new MagicQuiver(), theArcher.characters.TheArcher.Enums.COLOR_ORANGE);
         //BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), theArcher.characters.TheArcher.Enums.COLOR_ORANGE);
         //BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), theArcher.characters.TheArcher.Enums.COLOR_ORANGE);
         
@@ -391,7 +393,7 @@ public class TheArcher implements
         // Mark relics as seen - makes it visible in the compendium immediately
         // If you don't have this it won't be visible in the compendium until you see them in game
         // (the others are all starters so they're marked as seen in the character file)
-        //UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
+        UnlockTracker.markRelicAsSeen(MagicQuiver.ID);
 
         logger.info("Done adding relics!");
     }

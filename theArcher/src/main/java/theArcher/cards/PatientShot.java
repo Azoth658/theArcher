@@ -51,7 +51,7 @@ public class PatientShot extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
                 this.upgradeName();
-                this.upgradeBaseCost(0);
+                this.shuffleBackIntoDrawPile = true;
                 initializeDescription();
         }
     }
