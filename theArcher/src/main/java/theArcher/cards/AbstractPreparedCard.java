@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theArcher.powers.HeldActionPower;
 import theArcher.powers.NockedAndLoadedPower;
 
@@ -117,6 +118,6 @@ public abstract class AbstractPreparedCard extends CustomCard {
 
     @Override
     public boolean freeToPlay() {
-        return super.freeToPlay() || this.hasTag(SHOT) && AbstractDungeon.player.hasPower(NockedAndLoadedPower.POWER_ID) && AbstractDungeon.player.getPower(NockedAndLoadedPower.POWER_ID).amount > 0;
+        return super.freeToPlay() || AbstractDungeon.player != null && AbstractDungeon.currMapNode != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && this.hasTag(SHOT) && AbstractDungeon.player.hasPower(NockedAndLoadedPower.POWER_ID) && AbstractDungeon.player.getPower(NockedAndLoadedPower.POWER_ID).amount > 0;
     }
 }
