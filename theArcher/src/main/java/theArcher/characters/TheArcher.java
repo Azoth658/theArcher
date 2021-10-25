@@ -21,6 +21,7 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theArcher.cards.*;
+import theArcher.relics.MagicQuiver;
 
 import java.util.ArrayList;
 
@@ -170,7 +171,7 @@ public class TheArcher extends CustomPlayer {
     // Starting Relics	
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        //retVal.add(PlaceholderRelic.ID);
+        retVal.add(MagicQuiver.ID);
         return retVal;
     }
 

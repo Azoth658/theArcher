@@ -1,9 +1,9 @@
 {
-  "theArcher:PlaceholderRelic": {
-    "NAME": "Placeholder Energy Relic",
-    "FLAVOR": "The snake is a friend.",
+  "theArcher:MagicQuiver": {
+    "NAME": "Magic Quiver",
+    "FLAVOR": "An almost limitless supply of arrows.",
     "DESCRIPTIONS": [
-      "Gain #b1 [E] ."
+      "The first time you play a #yShot card each turn, draw a card."
     ]
   },
   "theArcher:PlaceholderRelic2": {
