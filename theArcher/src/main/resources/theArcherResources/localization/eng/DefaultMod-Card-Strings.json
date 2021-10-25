@@ -349,6 +349,12 @@
     "EXTENDED_DESCRIPTION": ["At the end of your turn if not played this card increases #yBlock by #yPrepared ."]
   },
 
+  "theArcher:SpeedShot": {
+    "NAME": "Speed Shot",
+    "DESCRIPTION": "Deal !D! damage. NL *Fatigue !M!.",
+    "EXTENDED_DESCRIPTION": ["When played this card decreases damage by #yFatigue."]
+  },
+
   "theArcher:StudiedShot": {
     "NAME": "Studied Shot",
     "DESCRIPTION": "Deal !D! damage. NL When played permanently increase damage by !M!. NL Exhaust."
