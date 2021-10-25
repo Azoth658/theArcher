@@ -1,6 +1,7 @@
 package theArcher.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -23,11 +24,9 @@ public class TrickShotMoveAction extends AbstractGameAction {
 
     public void update() {
         if (this.duration == Settings.ACTION_DUR_MED) {
-            this.p.hand.moveToDeck(card, false);
-                        AbstractDungeon.player.hand.refreshHandLayout();
-            this.isDone = true;
+                    this.p.hand.moveToDeck(card, false);
+                    AbstractDungeon.player.hand.refreshHandLayout();
+            }
+            this.tickDuration();
         }
-
-        this.tickDuration();
-    }
 }

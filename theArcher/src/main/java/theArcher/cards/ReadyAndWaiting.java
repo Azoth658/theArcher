@@ -33,7 +33,7 @@ public class ReadyAndWaiting extends AbstractDynamicCard {
     public static final CardColor COLOR = TheArcher.Enums.COLOR_ORANGE;
 
     private static final int COST = 1;
-    private static final int UPGRADE_MAGIC = 2;
+    private static final int UPGRADE_MAGIC = 1;
     // /STAT DECLARATION/
 
 

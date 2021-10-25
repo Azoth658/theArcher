@@ -6,19 +6,18 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import theArcher.actions.HobblingBlowAction;
 import theArcher.characters.TheArcher;
+import theArcher.powers.AlwaysAheadPower;
+import theArcher.powers.ReadyAndWaitingPower;
 
 import static theArcher.TheArcher.makeCardPath;
 
-public class Cower extends AbstractDynamicCard {
+public class AlwaysAhead extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = theArcher.TheArcher.makeID(Cower.class.getSimpleName());
-    public static final String IMG = makeCardPath("cower.png");
+    public static final String ID = theArcher.TheArcher.makeID(AlwaysAhead.class.getSimpleName());
+    public static final String IMG = makeCardPath("alwaysAhead.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -30,29 +29,25 @@ public class Cower extends AbstractDynamicCard {
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.SKILL;
+    private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheArcher.Enums.COLOR_ORANGE;
 
-    private static final int COST = 1;
-
-
+    private static final int COST = 2;
+    private static final int UPGRADE_MAGIC = 4;
     // /STAT DECLARATION/
 
 
-    public Cower() {
+    public AlwaysAhead() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-            this.baseMagicNumber = 2;
-            this.magicNumber = this.baseMagicNumber;
-            this.theArcherBaseSecondMagicNumber = 1;
-            this.theArcherSecondMagicNumber = this.theArcherBaseSecondMagicNumber;
+        this.baseMagicNumber = 6;
+        this.magicNumber = this.baseMagicNumber;
     }
 
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, -magicNumber), -magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, theArcherSecondMagicNumber), theArcherSecondMagicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new AlwaysAheadPower(p, magicNumber), magicNumber));
     }
 
     //Upgraded stats.
@@ -60,8 +55,7 @@ public class Cower extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(-1);
-            upgradeDefaultSecondMagicNumber(1);
+            upgradeMagicNumber(UPGRADE_MAGIC);
             initializeDescription();
         }
     }

@@ -16,5 +16,11 @@
       " NL (Current value: #b",
       ")"
     ]
+  },
+
+  "theArcher:ShuffleCardsIntoDeckAction": {
+    "TEXT": [
+      "Shuffle into deck"
+    ]
   }
 }

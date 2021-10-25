@@ -1,4 +1,9 @@
 {
+  "theArcher:AlwaysAhead": {
+    "NAME": "Always Ahead",
+    "DESCRIPTION": "When you play a *Fatigue card, NL Deal !M! damage to all enemies."
+  },
+
   "theArcher:Ambush": {
     "NAME": "Ambush",
     "DESCRIPTION": "Apply !M! Vulnerable and !theArcher:SecondMagic! *Targeted."
@@ -24,48 +29,6 @@
     "DESCRIPTION": "Deal !D! damage. NL If Fatal, gain !D! Gold NL *Fatigue !M!.",
     "EXTENDED_DESCRIPTION": ["When played this card decreases #yDamage and #yGold by #yFatigue."]
   },
-
-  "theArcher:DefaultCommonPower": {
-    "NAME": "Hold Place",
-    "DESCRIPTION": "Gain !M! theArcher:Keyword.",
-    "UPGRADE_DESCRIPTION": "Gain !M! theArcher:Keywords."
-  },
-
-  "theArcher:DefaultUncommonAttack": {
-    "NAME": "Big slap",
-    "DESCRIPTION": "Deal !D! damage."
-  },
-  "theArcher:DefaultUncommonSkill": {
-    "NAME": "A Better Defend",
-    "DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
-  },
-  "theArcher:DefaultUncommonPower": {
-    "NAME": "Weirdness",
-    "DESCRIPTION": "Gain X theArcher:Keywords.",
-    "UPGRADE_DESCRIPTION": "Gain X +1 theArcher:Keywords."
-  },
-  "theArcher:DefaultRareAttack": {
-    "NAME": "TOUCH",
-    "DESCRIPTION": "Deal !D! damage."
-  },
-  "theArcher:DefaultRareSkill": {
-    "NAME": "For Each Loop x2",
-    "DESCRIPTION": "Apply !M! Vulnerable to all enemies, 2 times.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable to all enemies, 3 times."
-  },
-  "theArcher:DefaultRarePower": {
-    "NAME": "In-Progress Form",
-    "DESCRIPTION": "At the start of your turn, play a TOUCH."
-  },
-  "theArcher:DefaultAttackWithVariable": {
-    "NAME": "Special Strike",
-    "DESCRIPTION": "Deal !D! damage [E] times. NL (Deal !theArcher:ENERGY_DAMAGE! damage total.)"
-  },
-  "theArcher:DefaultSecondMagicNumberSkill": {
-    "NAME": "Cool 2 Number Card",
-    "DESCRIPTION": "Apply !M! Vulnerable and !theArcher:SecondMagic! poison to an enemy."
-  },
-
 
   "theArcher:ActionSurge": {
       "NAME": "Action Surge",
@@ -130,6 +93,12 @@
     "DESCRIPTION": "Shot cards you draw cost 0. NL Whenever you play a Shot card, Exhaust it."
   },
 
+  "theArcher:Evasion": {
+    "NAME": "Evasion",
+    "DESCRIPTION": "Gain !B! Block. NL *Fatigue !M!.",
+    "EXTENDED_DESCRIPTION": ["When played this card decreases #yBlock by #yFatigue."]
+  },
+
   "theArcher:EvasiveManoeuvres": {
     "NAME": "Evasive Manoeuvres",
     "DESCRIPTION": "Gain !theArcher:theArcherPreparedSecondMagic! *Buffer. NL *Prepare !M!. NL Exhaust.",
@@ -170,6 +139,12 @@
   "theArcher:StopDropRoll": {
     "NAME": "Stop Drop Roll",
     "DESCRIPTION": "Halve incoming damage. NL End your turn."
+  },
+
+  "theArcher:HastilyMadePlans": {
+    "NAME": "Hastily-Made Plans",
+    "DESCRIPTION": "At the end of your turn, Shuffle up to !M! card into your draw pile.",
+    "UPGRADE_DESCRIPTION": "At the end of your turn, Shuffle up to !M! cards into your draw pile."
   },
 
   "theArcher:HawkEye": {
@@ -251,6 +226,16 @@
     "DESCRIPTION": "This turn, your attacks deal double damage. Draw one less card next turn."
   },
 
+  "theArcher:Parry": {
+    "NAME": "Parry",
+    "DESCRIPTION": "Gain !B! Block. NL Increase this cards Block by !M! for this combat. NL Shuffle this card into your draw pile."
+  },
+
+  "theArcher:PatientShot": {
+    "NAME": "Patient Shot",
+    "DESCRIPTION": "Deal damage equal to your discard pile."
+  },
+
   "theArcher:Persevere": {
     "NAME": "Persevere",
     "DESCRIPTION": "Retain. NL Gain !B! Block. NL *Prepare !M!.",
@@ -262,6 +247,12 @@
     "DESCRIPTION": "Enemy loses !D! HP."
   },
 
+  "theArcher:PointBlankShot": {
+    "NAME": "Point Blank Shot",
+    "DESCRIPTION": "Apply 2 Vulnerable. NL Deal !D! damage. NL Gain 2 Vulnerable. NL *Fatigue !M!.",
+    "UPGRADE_DESCRIPTION": "Apply 3 Vulnerable. NL Deal !D! damage. NL Gain 3 Vulnerable. NL *Fatigue !M!.",
+    "EXTENDED_DESCRIPTION": ["When played this card decreases damage by #yFatigue."]
+  },
 
   "theArcher:PoisonedTips": {
     "NAME": "Poisoned Tips",
@@ -324,6 +315,12 @@
   "theArcher:Reserves": {
     "NAME": "Reserves",
     "DESCRIPTION": "Play the bottom card of your draw pile and Exhaust it."
+  },
+
+  "theArcher:Respite": {
+    "NAME": "Respite",
+    "DESCRIPTION": "Heal !M! HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Heal !M! HP. NL Gain !theArcher:SecondMagic! Max HP. NL Exhaust."
   },
 
   "theArcher:RicochetShot": {

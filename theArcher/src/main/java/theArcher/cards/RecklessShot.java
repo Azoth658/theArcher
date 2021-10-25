@@ -87,6 +87,7 @@ public class RecklessShot extends AbstractFatigueCard {
         if (!upgraded) {
             upgradeName();
             this.upgradeDamage(5);
+            this.upgradeMisc(5);
             this.fatigueAmount += FATIGUE_UPGRADE;
             this.magicNumber = fatigueAmount;
             this.baseMagicNumber = magicNumber;

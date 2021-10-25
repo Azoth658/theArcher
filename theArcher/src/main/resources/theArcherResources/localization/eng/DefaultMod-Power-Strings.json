@@ -8,6 +8,14 @@
         "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
 },
 
+        "theArcher:AlwaysAheadPower": {
+                "NAME": "Always Ahead",
+                "DESCRIPTIONS": [
+                        "When playing a #yFatigue card, deal #b",
+                        " #yDamage to all enemies."
+                ]
+        },
+
         "theArcher:TwinShotPower": {
                 "NAME": "Twin Shot",
                 "DESCRIPTIONS": [
