@@ -43,6 +43,7 @@ public class HobblingBlow extends AbstractDynamicCard {
 
     public HobblingBlow() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        this.exhaust = true;
     }
 
 

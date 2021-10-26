@@ -33,7 +33,7 @@ public class TuckAndRoll extends AbstractFatigueCard {
     public static final CardColor COLOR = TheArcher.Enums.COLOR_ORANGE;
 
     private static final int COST = 1;
-    private static final int BLOCK = 7;
+    private static final int BLOCK = 6;
     private static final int FATIGUE = 3;
     private static final int FATIGUE_UPGRADE = -1;
     private static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
@@ -75,7 +75,8 @@ public class TuckAndRoll extends AbstractFatigueCard {
             this.fatigueAmount += FATIGUE_UPGRADE;
             this.magicNumber = fatigueAmount;
             this.baseMagicNumber = magicNumber;
-            this.upgradeMisc(3);
+            this.upgradeBlock(2);
+            this.upgradeMisc(2);
             initializeDescription();
         }
     }

@@ -34,8 +34,8 @@ public class FocusedStrike extends AbstractFatigueCard {
     public static final CardColor COLOR = TheArcher.Enums.COLOR_ORANGE;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 7;
-    private static final int FATIGUE = 2;
+    private static final int DAMAGE = 6;
+    private static final int FATIGUE = 3;
     private static final int FATIGUE_UPGRADE = -1;
 
     private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

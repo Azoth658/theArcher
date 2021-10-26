@@ -36,7 +36,7 @@ public class Persevere extends AbstractPreparedCard {
 
     private static final int COST = 1;
     private static final int BLOCK = 7;
-    private static final int PREPARED = 4;
+    private static final int PREPARED = 3;
     private static final int PREPARED_UPGRADE = 2;
 
     private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -85,7 +85,7 @@ public class Persevere extends AbstractPreparedCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.upgradeBlock(2);
+            this.upgradeBlock(1);
             this.upgradeMisc(2);
             this.preparedAmount += PREPARED_UPGRADE;
             this.magicNumber = preparedAmount;

@@ -52,7 +52,7 @@ public class HailOfArrows extends AbstractDynamicCard {
     public HailOfArrows() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = 0;
-        this.baseMagicNumber = 4;
+        this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
         this.isMultiDamage = true;
     }
@@ -114,7 +114,7 @@ public class HailOfArrows extends AbstractDynamicCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(4);
+            this.upgradeMagicNumber(2);
         }
 
     }

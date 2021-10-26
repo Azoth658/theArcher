@@ -29,7 +29,7 @@ public class FatigueAction extends AbstractGameAction {
     public void update() {
 
         if(!AbstractDungeon.player.hasPower(MasteryFormPower.POWER_ID)) {
-            this.card.superFlash(Color.RED);
+            this.card.superFlash(Color.RED.cpy());
 
             card.misc += this.miscFatigue;
             card.applyPowers();

@@ -9,10 +9,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import theArcher.actions.InMySightsAction;
 import theArcher.characters.TheArcher;
 import theArcher.powers.MasteryFormPower;
 import theArcher.powers.RicochetPower;
 import theArcher.powers.TargetedPower;
+
+import java.util.Iterator;
 
 import static theArcher.TheArcher.makeCardPath;
 
@@ -51,6 +54,15 @@ public class RicochetShot extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RicochetPower(p)));
+
+        if(upgraded) {
+            Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+
+            while (var3.hasNext()) {
+                AbstractMonster mo = (AbstractMonster) var3.next();
+                this.addToBot(new ApplyPowerAction(mo, p, new TargetedPower(mo, p, this.magicNumber)));
+            }
+        }
     }
 
     //Upgraded stats.
@@ -58,7 +70,7 @@ public class RicochetShot extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

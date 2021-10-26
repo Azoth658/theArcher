@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.unique.PatientMissileAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.VerticalImpactEffect;
@@ -32,6 +34,9 @@ public class PatientShot extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheArcher.Enums.COLOR_ORANGE;
 
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
     private static final int COST = 1;
     // STAT DECLARATION
 
@@ -52,6 +57,7 @@ public class PatientShot extends AbstractDynamicCard {
         if (!upgraded) {
                 this.upgradeName();
                 this.shuffleBackIntoDrawPile = true;
+                rawDescription = UPGRADE_DESCRIPTION;
                 initializeDescription();
         }
     }

@@ -1,4 +1,10 @@
 {
+  "theArcher:ActionSurge": {
+    "NAME": "Action Surge",
+    "DESCRIPTION": "Gain [E]. NL Draw 1 card. NL Add a *Void into your discard pile.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E]. NL Draw 1 card. NL Add a *Void into your discard pile."
+  },
+
   "theArcher:AlwaysAhead": {
     "NAME": "Always Ahead",
     "DESCRIPTION": "When you play a *Fatigue card, NL Deal !M! damage to all enemies."
@@ -24,18 +30,6 @@
     "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your cards containing \"Shot\"."
   },
 
-  "theArcher:BountyHunt": {
-    "NAME": "Bounty Hunt",
-    "DESCRIPTION": "Deal !D! damage. NL If Fatal, gain !D! Gold NL *Fatigue !M!.",
-    "EXTENDED_DESCRIPTION": ["When played this card decreases #yDamage and #yGold by #yFatigue."]
-  },
-
-  "theArcher:ActionSurge": {
-      "NAME": "Action Surge",
-      "DESCRIPTION": "Gain [E]. NL Draw !M!. NL Add a *Void into your discard pile.",
-      "UPGRADE_DESCRIPTION": "Gain [E] [E]. NL Draw !M!. NL Add a *Void into your discard pile."
-    },
-
   "theArcher:ArrowToTheKnee": {
     "NAME": "Arrow to the Knee",
     "DESCRIPTION": "Deal !D! damage. NL Whenever you attack this enemy, gain !M! Block. NL Exhaust."
@@ -43,12 +37,18 @@
 
   "theArcher:BolaShot": {
     "NAME": "Bola Shot",
-    "DESCRIPTION": "Deal !D! damage, apply *Slow to the target."
+    "DESCRIPTION": "Deal !D! damage. NL Apply *Slow."
   },
 
   "theArcher:BoomerangShot": {
     "NAME": "Boomerang Shot",
-    "DESCRIPTION": "Deal !D! damage. At the end of each of your turns deal !M! damage."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! *Constricted."
+  },
+
+  "theArcher:BountyHunt": {
+    "NAME": "Bounty Hunt",
+    "DESCRIPTION": "Deal !D! damage. NL If Fatal, gain !D! Gold. NL *Fatigue !M!.",
+    "EXTENDED_DESCRIPTION": ["When played this card decreases #yDamage and #yGold by #yFatigue."]
   },
 
   "theArcher:BowBreak": {
@@ -64,13 +64,13 @@
 
   "theArcher:Camouflage": {
     "NAME": "Camouflage",
-    "DESCRIPTION": "Gain !B! Block. NL Gain 2 Blur. NL *Fatigue !M!",
+    "DESCRIPTION": "Gain !B! Block. NL Gain 2 Blur. NL *Fatigue !M!.",
     "EXTENDED_DESCRIPTION": ["When played this card decreases #yBlock by #yFatigue."]
   },
 
   "theArcher:CoveringFire": {
     "NAME": "Covering Fire",
-    "DESCRIPTION": "Deal !D! damage. Gain !B! Block."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
   },
 
   "theArcher:Cower": {
@@ -85,7 +85,7 @@
 
   "theArcher:EffortlessShot": {
     "NAME": "Effortless Shot",
-    "DESCRIPTION": "Deal !D! damage. Gain !B! Block. NL Apply !M! Vulnerable, Weak and *Targeted. NL Exhaust"
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage.  NL Apply !M! Vulnerable, Weak and *Targeted. NL Exhaust."
   },
 
   "theArcher:EmptyQuiver": {
@@ -108,15 +108,15 @@
 
   "theArcher:FlamingShot": {
     "NAME": "Flaming Shot",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust up to 1 card. NL *Fatigue !M!",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Exhaust up to 3 cards. NL *Fatigue !M!",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust up to 1 card. NL *Fatigue !M!.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Exhaust up to 3 cards. NL *Fatigue !M!.",
     "EXTENDED_DESCRIPTION": ["When played this card decreases damage by #yFatigue."]
   },
 
   "theArcher:FocusedStrike": {
     "NAME": "Focused Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 2 cards. NL *Fatigue !M!",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw 3 cards. NL *Fatigue !M!",
+    "DESCRIPTION": "Deal !D! damage. NL Draw 2 cards. NL *Fatigue !M!.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw 3 cards. NL *Fatigue !M!.",
     "EXTENDED_DESCRIPTION": ["When played this card decreases damage by #yFatigue."]
   },
 
@@ -136,11 +136,6 @@
     ]
   },
 
-  "theArcher:StopDropRoll": {
-    "NAME": "Stop Drop Roll",
-    "DESCRIPTION": "Halve incoming damage. NL End your turn."
-  },
-
   "theArcher:HastilyMadePlans": {
     "NAME": "Hastily-Made Plans",
     "DESCRIPTION": "At the end of your turn, Shuffle up to !M! card into your draw pile.",
@@ -149,7 +144,7 @@
 
   "theArcher:HawkEye": {
     "NAME": "Hawk Eye",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! *Targeted if damage was received. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! *Targeted if this dealt unblocked damage. NL Exhaust."
   },
 
   "theArcher:HeavyShot": {
@@ -164,13 +159,13 @@
 
   "theArcher:HobblingBlow": {
     "NAME": "Hobbling Blow",
-    "DESCRIPTION": "Enemy loses X Strength. NL Apply X Vulnerable.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Enemy loses X+1 Strength. NL Apply X+1 Vulnerable."
+    "DESCRIPTION": "Enemy loses X Strength. NL Apply X Vulnerable. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Enemy loses X+1 Strength. NL Apply X+1 Vulnerable. NL Exhaust."
   },
 
   "theArcher:HuntingShot": {
     "NAME": "Hunting Shot",
-    "DESCRIPTION": "Deal !D! damage. NL If Fatal, raise your Max HP by !M!. Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL If Fatal, raise your Max HP by !M!. NL Exhaust."
   },
 
   "theArcher:ImprovedBowString": {
@@ -181,8 +176,8 @@
 
   "theArcher:InMySights": {
     "NAME": "In My Sights",
-    "DESCRIPTION": "Apply *Targeted X times.",
-    "UPGRADE_DESCRIPTION": "Apply *Targeted X + 1 times."
+    "DESCRIPTION": "Apply !M! *Targeted to ALL enemies X times.",
+    "UPGRADE_DESCRIPTION": "Apply !M! *Targeted to ALL enemies X + 1 times."
   },
 
   "theArcher:LeechingShot": {
@@ -223,7 +218,8 @@
 
   "theArcher:Overdraw": {
     "NAME": "Over Draw",
-    "DESCRIPTION": "This turn, your attacks deal double damage. Draw one less card next turn."
+    "DESCRIPTION": "This turn, your attacks deal double damage. Draw one less card next turn.",
+    "UPGRADE_DESCRIPTION": "Retain. NL This turn, your attacks deal double damage. Draw one less card next turn."
   },
 
   "theArcher:Parry": {
@@ -233,8 +229,8 @@
 
   "theArcher:PatientShot": {
     "NAME": "Patient Shot",
-    "DESCRIPTION": "Deal damage equal to your discard pile.",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to your discard pile. NL Shuffle this card into your draw pile."
+    "DESCRIPTION": "Deal damage equal to the number of cards in your your discard pile.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to the number of cards in your discard pile. NL Shuffle this card into your draw pile."
   },
 
   "theArcher:Persevere": {
@@ -255,9 +251,9 @@
     "EXTENDED_DESCRIPTION": ["When played this card decreases damage by #yFatigue."]
   },
 
-  "theArcher:PoisonedTips": {
-    "NAME": "Poisoned Tips",
-    "DESCRIPTION": "When you deal unblocked attack damage, apply !M! Poison."
+  "theArcher:EnchantedArrows": {
+    "NAME": "Enchanted Arrows",
+    "DESCRIPTION": "When you deal unblocked attack damage, apply !M! *Targeted."
   },
 
   "theArcher:PreparedShot": {
@@ -274,7 +270,7 @@
 
   "theArcher:PrimedShot": {
     "NAME": "Primed Shot",
-    "DESCRIPTION": "Innate. NL Apply !M! Vulnerable, Weak and *Targeted. NL Exhaust"
+    "DESCRIPTION": "Innate. NL Apply !M! Vulnerable, Weak and *Targeted. NL Exhaust."
   },
 
   "theArcher:QuickDodge": {
@@ -285,8 +281,8 @@
 
   "theArcher:QuickDraw": {
     "NAME": "Quick Draw",
-    "DESCRIPTION": "Draw 3 Shot cards from your draw pile.",
-    "UPGRADE_DESCRIPTION": "Draw 3 Shot cards from your draw pile. They cost 0 this turn."
+    "DESCRIPTION": "Put !M! random *Shot cards from your draw pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Put !M! random *Shot cards from your draw pile into your hand. NL They cost 0 this turn."
   },
 
   "theArcher:QuickRelease": {
@@ -320,25 +316,25 @@
 
   "theArcher:Respite": {
     "NAME": "Respite",
-    "DESCRIPTION": "Heal !M! HP. NL Exhaust.",
+    "DESCRIPTION": "Heal !M! HP. NL Gain !theArcher:SecondMagic! Max HP. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Heal !M! HP. NL Gain !theArcher:SecondMagic! Max HP. NL Exhaust."
   },
 
   "theArcher:RicochetShot": {
     "NAME": "Ricochet Shots",
-    "DESCRIPTION": "Cards that target single enemies now target ALL *Targeted enemies.",
-    "UPGRADE_DESCRIPTION": "Cards that target single enemies now target ALL *Targeted enemies. NL Apply 1 target to all enemies."
+    "DESCRIPTION": "Cards that target single enemies now play again, against ALL other *Targeted enemies.",
+    "UPGRADE_DESCRIPTION": "Cards that target single enemies now play again, against ALL other *Targeted enemies. NL Apply 1 target to ALL enemies."
   },
 
   "theArcher:Scouting": {
     "NAME": "Scouting",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! *Targeted."
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! card. NL Apply !M! *Targeted."
   },
 
   "theArcher:ShootingGallery": {
     "NAME": "Shooting Gallery",
-    "DESCRIPTION": "Double all enemies *Targeted. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Triple all enemies *Targeted"
+    "DESCRIPTION": "Double ALL enemies *Targeted. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Double ALL enemies *Targeted."
   },
 
   "theArcher:Smokescreen": {
@@ -353,9 +349,14 @@
     "EXTENDED_DESCRIPTION": ["When played this card decreases damage by #yFatigue."]
   },
 
+  "theArcher:StopDropRoll": {
+    "NAME": "Stop Drop Roll",
+    "DESCRIPTION": "Take half damage this turn. NL End your turn. NL Exhaust."
+  },
+
   "theArcher:StudiedShot": {
     "NAME": "Studied Shot",
-    "DESCRIPTION": "Deal !D! damage. NL When played permanently increase damage by !M!. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Permanently increase this card's damage by !M!. NL Exhaust."
   },
 
   "theArcher:StunningShot": {
@@ -370,7 +371,7 @@
 
   "theArcher:TakeCover": {
     "NAME": "Take Cover",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! plated armor."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Plated Armor."
   },
 
   "theArcher:TargetPractice": {
@@ -380,7 +381,7 @@
 
   "theArcher:Threaten": {
     "NAME": "Threaten",
-    "DESCRIPTION": "Enemy loses !M! Strength. Gain !M! Strength NL Exhaust."
+    "DESCRIPTION": "Enemy loses !M! Strength. NL Gain !M! Strength NL Exhaust."
   },
 
   "theArcher:TrackingShot": {
@@ -408,17 +409,17 @@
 
   "theArcher:TwinShot": {
     "NAME": "Twin Shot",
-    "DESCRIPTION": "Your next Shot is played twice.",
-    "UPGRADE_DESCRIPTION": "Your next !M! Shots are played twice."
+    "DESCRIPTION": "Your next *Shot card is played twice.",
+    "UPGRADE_DESCRIPTION": "Your next !M! *Shots cards are played twice."
   },
 
   "theArcher:Volley": {
     "NAME": "Volley",
-    "DESCRIPTION": "Deal !D! damage to all enemies."
+    "DESCRIPTION": "Deal !D! damage and apply 1 Weak to ALL enemies"
   },
 
   "theArcher:WingingShot": {
     "NAME": "Winging Shot",
-    "DESCRIPTION": "Deal !D! damage. Target loses !M! Strength this turn. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Target loses !M! Strength this turn. NL Exhaust."
   }
 }

@@ -39,6 +39,8 @@ public class Overdraw extends AbstractDynamicCard {
 
     public Overdraw() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber;
     }
 
 
@@ -54,7 +56,8 @@ public class Overdraw extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.upgradeBaseCost(0);
+            this.selfRetain = true;
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

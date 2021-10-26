@@ -44,8 +44,8 @@ public class ActionSurge extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainEnergyAction(this.magicNumber));
-        this.addToBot(new DrawCardAction(this.magicNumber));
-        this.addToBot(new MakeTempCardInDiscardAction(new VoidCard(), this.magicNumber));
+        this.addToBot(new DrawCardAction(1));
+        this.addToBot(new MakeTempCardInDiscardAction(new VoidCard(), 1));
     }
 
     //Upgraded stats.

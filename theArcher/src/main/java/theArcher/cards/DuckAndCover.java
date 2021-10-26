@@ -52,6 +52,7 @@ public class DuckAndCover extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
+            upgradeMagicNumber(1);
             initializeDescription();
         }
     }

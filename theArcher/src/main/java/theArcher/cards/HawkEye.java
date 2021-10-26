@@ -31,7 +31,7 @@ public class HawkEye extends AbstractDynamicCard {
     public HawkEye() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = 1;
-        this.baseMagicNumber = 3;
+        this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
     }
@@ -46,7 +46,8 @@ public class HawkEye extends AbstractDynamicCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            this.upgradeMagicNumber(2);
+            this.upgradeDamage(3);
+            this.upgradeMagicNumber(1);
             upgradeName();
             initializeDescription();
         }

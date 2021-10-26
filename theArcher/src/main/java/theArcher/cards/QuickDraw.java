@@ -40,6 +40,8 @@ public class QuickDraw extends AbstractDynamicCard {
 
     public QuickDraw() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        this.baseMagicNumber = 3;
+        this.magicNumber = baseMagicNumber;
     }
 
 
@@ -47,8 +49,8 @@ public class QuickDraw extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if(upgraded){
-            this.addToBot(new MoveCardsOfTagHandAction(SHOT,3,true));
-        } else this.addToBot(new MoveCardsOfTagHandAction(SHOT,3,false));
+            this.addToBot(new MoveCardsOfTagHandAction(SHOT,magicNumber,true));
+        } else this.addToBot(new MoveCardsOfTagHandAction(SHOT,magicNumber,false));
     }
 
     //Upgraded stats.

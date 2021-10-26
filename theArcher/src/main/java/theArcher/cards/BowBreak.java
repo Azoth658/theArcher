@@ -34,6 +34,7 @@ public class BowBreak extends AbstractDynamicCard {
     public BowBreak() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = 12;
+        this.cardsToPreview = new Clumsy();
     }
 
     // Actions the card should do.

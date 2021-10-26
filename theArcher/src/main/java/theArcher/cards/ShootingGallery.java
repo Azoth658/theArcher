@@ -46,6 +46,7 @@ public class ShootingGallery extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.exhaust = true;
         this.baseMagicNumber = 1;
+        this.magicNumber = baseMagicNumber;
     }
 
 
@@ -67,7 +68,6 @@ public class ShootingGallery extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
             this.exhaust = false;
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();

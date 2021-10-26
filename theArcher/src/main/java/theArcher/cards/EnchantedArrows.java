@@ -8,14 +8,15 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.EnvenomPower;
 import theArcher.characters.TheArcher;
+import theArcher.powers.EnchantedArrowsPower;
 
 import static theArcher.TheArcher.makeCardPath;
 
-public class PoisonedTips extends AbstractDynamicCard {
+public class EnchantedArrows extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = theArcher.TheArcher.makeID(PoisonedTips.class.getSimpleName());
+    public static final String ID = theArcher.TheArcher.makeID(EnchantedArrows.class.getSimpleName());
     public static final String IMG = makeCardPath("poisonedTips.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -31,12 +32,11 @@ public class PoisonedTips extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheArcher.Enums.COLOR_ORANGE;
 
-    private static final int COST = 1;
-    private static final int UPGRADE_MAGIC = 1;
+    private static final int COST = 3;
     // /STAT DECLARATION/
 
 
-    public PoisonedTips() {
+    public EnchantedArrows() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
@@ -46,7 +46,7 @@ public class PoisonedTips extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnvenomPower(p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnchantedArrowsPower(p, magicNumber), magicNumber));
     }
 
     //Upgraded stats.
@@ -54,7 +54,7 @@ public class PoisonedTips extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_MAGIC);
+            upgradeBaseCost(2);
             initializeDescription();
         }
     }

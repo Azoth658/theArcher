@@ -156,14 +156,13 @@ public class TheArcher extends CustomPlayer {
         retVal.add(ArcherBaseStrike.ID);
         retVal.add(ArcherBaseStrike.ID);
         retVal.add(ArcherBaseStrike.ID);
-        retVal.add(ArcherBaseStrike.ID);
+        retVal.add(PreparedShot.ID);
 
         retVal.add(ArcherBaseDefend.ID);
         retVal.add(ArcherBaseDefend.ID);
         retVal.add(ArcherBaseDefend.ID);
         retVal.add(ArcherBaseDefend.ID);
         retVal.add(QuickDodge.ID);
-        retVal.add(PreparedShot.ID);
 
         return retVal;
     }
@@ -193,7 +192,7 @@ public class TheArcher extends CustomPlayer {
     // Ascension 14 or higher. (ironclad loses 5, defect and silent lose 4 hp respectively)
     @Override
     public int getAscensionMaxHPLoss() {
-        return 5;
+        return 8;
     }
 
     // Should return the card color enum to be associated with your character.
@@ -205,7 +204,7 @@ public class TheArcher extends CustomPlayer {
     // Should return a color object to be used to color the trail of moving cards
     @Override
     public Color getCardTrailColor() {
-        return theArcher.TheArcher.DEFAULT_ORANGE;
+        return theArcher.TheArcher.DEFAULT_ORANGE.cpy();
     }
 
     // Should return a BitmapFont object that you can use to customize how your
@@ -224,7 +223,7 @@ public class TheArcher extends CustomPlayer {
     //Which card should be obtainable from the Match and Keep event?
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new ArcherBaseStrike();
+        return new PreparedShot();
     }
 
     // The class name as it appears next to your player name in-game
@@ -242,14 +241,14 @@ public class TheArcher extends CustomPlayer {
     // Should return a Color object to be used to color the miniature card images in run history.
     @Override
     public Color getCardRenderColor() {
-        return theArcher.TheArcher.DEFAULT_ORANGE;
+        return theArcher.TheArcher.DEFAULT_ORANGE.cpy();
     }
 
     // Should return a Color object to be used as screen tint effect when your
     // character attacks the heart.
     @Override
     public Color getSlashAttackColor() {
-        return theArcher.TheArcher.DEFAULT_ORANGE;
+        return theArcher.TheArcher.DEFAULT_ORANGE.cpy();
     }
 
     // Should return an AttackEffect array of any size greater than 0. These effects

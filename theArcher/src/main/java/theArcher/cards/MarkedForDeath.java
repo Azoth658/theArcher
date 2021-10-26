@@ -33,11 +33,11 @@ public class MarkedForDeath extends AbstractFatigueCard {
 
     private static final int COST = 1;
 
-    private static final int TARGETED = 5;
-    private static final int TARGETED_UPGRADE = 7;
+    private static final int TARGETED = 2;
+    private static final int TARGETED_UPGRADE = 3;
 
-    private static final int FATIGUE = 3;
-    private static final int FATIGUE_UPGRADE = -1;
+    private static final int FATIGUE = 1;
+    private static final int FATIGUE_UPGRADE = 0;
 
     private static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 

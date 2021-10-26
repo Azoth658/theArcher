@@ -46,6 +46,7 @@ public class TrackingShot extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = 3;
         this.baseMagicNumber = TARGETED;
+        this.magicNumber = this.baseMagicNumber;
         tags.add(SHOT);
     }
 
@@ -62,8 +63,7 @@ public class TrackingShot extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.upgradeDamage(3);
-            this.upgradeMagicNumber(1);
+            this.upgradeDamage(4);
             initializeDescription();
         }
     }

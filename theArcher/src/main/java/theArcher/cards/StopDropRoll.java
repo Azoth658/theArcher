@@ -38,6 +38,7 @@ public class StopDropRoll extends AbstractDynamicCard {
 
     public StopDropRoll() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        this.exhaust = true;
     }
 
 

@@ -40,7 +40,7 @@ public class Respite extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber = 6;
         this.magicNumber = this.baseMagicNumber;
-        this.theArcherBaseSecondMagicNumber = 0;
+        this.theArcherBaseSecondMagicNumber = 1;
         this.theArcherSecondMagicNumber = theArcherBaseSecondMagicNumber;
         this.exhaust = true;
         tags.add(CardTags.HEALING);
@@ -59,7 +59,7 @@ public class Respite extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(4);
+            upgradeMagicNumber(2);
             upgradeDefaultSecondMagicNumber(1);
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();

@@ -6,7 +6,7 @@
     <groupId>theArcher</groupId>
     <artifactId>TheArcher</artifactId> <!--Keep a note of this one: this is the ID used in the "auto add cards" method-->
     <name>The Archer</name>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <description>An archer who targets their foes and prepares their attacks before fatigue sets in.</description>
 
     <properties>

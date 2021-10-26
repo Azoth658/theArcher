@@ -31,7 +31,7 @@ public class GoingProne extends AbstractFatigueCard {
     public static final CardColor COLOR = TheArcher.Enums.COLOR_ORANGE;
 
     private static final int COST = 1;
-    private static final int BLOCK = 12;
+    private static final int BLOCK = 10;
     private static final int FATIGUE = 6;
     private static final int FATIGUE_UPGRADE = -3;
     private static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;

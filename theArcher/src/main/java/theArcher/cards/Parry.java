@@ -39,8 +39,8 @@ public class Parry extends AbstractDynamicCard {
 
     public Parry() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseBlock = 6;
-        this.baseMagicNumber = 4;
+        this.baseBlock = 5;
+        this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
         this.shuffleBackIntoDrawPile = true;
     }
@@ -59,7 +59,7 @@ public class Parry extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             this.upgradeBlock(2);
-            this.upgradeMagicNumber(2);
+            this.upgradeMagicNumber(1);
             initializeDescription();
         }
     }

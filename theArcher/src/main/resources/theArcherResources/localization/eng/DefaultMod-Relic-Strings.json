@@ -1,4 +1,12 @@
 {
+  "theArcher:BarbedArrowhead": {
+    "NAME": "Barbed Arrow",
+    "FLAVOR": "Customised arrowhead to deal additional damage.",
+    "DESCRIPTIONS": [
+      "Whenever you apply a debuff to an enemy, they take #b2 damage."
+    ]
+  },
+
   "theArcher:MagicQuiver": {
     "NAME": "Magic Quiver",
     "FLAVOR": "An almost limitless supply of arrows.",

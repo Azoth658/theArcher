@@ -1,6 +1,7 @@
 package theArcher.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -43,6 +44,7 @@ public class Scouting extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainBlockAction(p, p, block));
+        this.addToBot(new DrawCardAction(this.magicNumber));
         this.addToBot(new ApplyPowerAction(m, p, new TargetedPower(m, p, this.magicNumber)));
     }
 

@@ -56,6 +56,7 @@ public class HastilyMadePlans extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(1);
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

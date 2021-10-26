@@ -39,7 +39,7 @@ public class BoomerangShot extends AbstractDynamicCard {
     public BoomerangShot() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = 6;
-        this.baseMagicNumber = 4;
+        this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         tags.add(SHOT);
     }

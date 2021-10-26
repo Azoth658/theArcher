@@ -47,13 +47,12 @@ public class ShuffleIntoDeckPower extends AbstractPower implements CloneablePowe
         updateDescription();
     }
 
+    @Override
     public void updateDescription() {
-        if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-        } else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
+        if (amount > 1){
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
         }
-
+        else description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
     public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {

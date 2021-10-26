@@ -16,6 +16,14 @@
                 ]
         },
 
+        "theArcher:EnchantedArrowsPower": {
+                "NAME": "Enchanted Arrows",
+                "DESCRIPTIONS": [
+                        "Whenever you deal unblocked attack damage, apply #b",
+                        " #yTargeted."
+                ]
+        },
+
         "theArcher:TwinShotPower": {
                 "NAME": "Twin Shot",
                 "DESCRIPTIONS": [
@@ -66,8 +74,8 @@
         "theArcher:QuickReleasePower": {
                 "NAME": "Quick Release",
                 "DESCRIPTIONS": ["When you play a shot card draw #b",
-                        "shot card.",
-                        "shot cards."]
+                        " shot card.",
+                        " shot cards."]
         },
 
         "theArcher:ReadyAndWaitingPower": {
@@ -75,6 +83,15 @@
                 "DESCRIPTIONS": [
                         "Whenever a card is #yPrepared, gain #b",
                         " #yBlock."
+                ]
+        },
+
+        "theArcher:ShuffleIntoDeckPower": {
+                "NAME": "Hastily-Made Plans",
+                "DESCRIPTIONS": [
+                        "At the end of your turn, Shuffle up to #b",
+                        " card into your draw pile.",
+                        " cards into your draw pile."
                 ]
         },
 

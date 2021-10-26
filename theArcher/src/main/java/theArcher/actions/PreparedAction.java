@@ -24,7 +24,7 @@ public class PreparedAction extends AbstractGameAction {
 
     public void update() {
 
-        this.card.superFlash(Color.GREEN);
+        this.card.superFlash(Color.GREEN.cpy());
 
         card.misc += this.miscPrepared;
         card.applyPowers();

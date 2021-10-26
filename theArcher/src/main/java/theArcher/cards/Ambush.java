@@ -51,7 +51,6 @@ public class Ambush extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(1);
-            upgradeDefaultSecondMagicNumber(1);
             initializeDescription();
         }
     }

@@ -37,8 +37,8 @@ public class EffortlessShot extends AbstractDynamicCard {
 
     public EffortlessShot() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 3;
-        this.baseBlock = 3;
+        this.baseDamage = 1;
+        this.baseBlock = 1;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
@@ -48,7 +48,7 @@ public class EffortlessShot extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         this.addToBot(new GainBlockAction(p, p, block));
         this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false)));
         this.addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false)));
