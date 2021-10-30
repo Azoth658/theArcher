@@ -43,10 +43,11 @@ public class FatigueAction extends AbstractGameAction {
         else
             card.misc  += this.miscFatigue;
             card.applyPowers();
+            if(AbstractDungeon.player.hasPower(AlwaysAheadPower.POWER_ID)){
+                this.addToBot(new DamageAllEnemiesAction((AbstractCreature)null, DamageInfo.createDamageMatrix(AbstractDungeon.player.getPower(AlwaysAheadPower.POWER_ID).amount, true), DamageInfo.DamageType.THORNS, AttackEffect.FIRE, true));
+            }
 
-        if(AbstractDungeon.player.hasPower(AlwaysAheadPower.POWER_ID)){
-            this.addToBot(new DamageAllEnemiesAction((AbstractCreature)null, DamageInfo.createDamageMatrix(AbstractDungeon.player.getPower(AlwaysAheadPower.POWER_ID).amount, true), DamageInfo.DamageType.THORNS, AttackEffect.FIRE, true));
-        }
+
            this.isDone = true;
 
 

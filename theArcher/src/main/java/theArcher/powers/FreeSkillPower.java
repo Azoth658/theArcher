@@ -2,6 +2,7 @@ package theArcher.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -16,10 +17,10 @@ import static theArcher.TheArcher.makePowerPath;
 
 //Gain 1 dex for the turn for each card played.
 
-public class NockedAndLoadedPower extends AbstractPower implements CloneablePowerInterface {
+public class FreeSkillPower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
 
-    public static final String POWER_ID = TheArcher.makeID("NockedAndLoadedPower");
+    public static final String POWER_ID = TheArcher.makeID("FreeSkillPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -29,52 +30,41 @@ public class NockedAndLoadedPower extends AbstractPower implements CloneablePowe
 
     private int basePower;
 
-    public NockedAndLoadedPower(final AbstractCreature owner, int amount, int basePower) {
+    public FreeSkillPower(final AbstractCreature owner, int amount) {
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
-        this.basePower = basePower;
-        if(amount > 1){
-            this.description = DESCRIPTIONS[0] + "#b"+amount + DESCRIPTIONS[2];
-        }
-        this.description = DESCRIPTIONS[0] + DESCRIPTIONS[1];
         type = PowerType.BUFF;
         isTurnBased = false;
-
-        // We load those textures here.
-
         this.loadRegion("swivel");
         //this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         //this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
-
         updateDescription();
     }
 
-    @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.hasTag(SHOT) && this.amount > 0){
-            if((amount - 1) <=0){
-                amount = 0;
-            } else --amount;
-        }
-    }
-
-    public void atEndOfTurn(boolean isPlayer) {
-        amount = basePower;
-    }
-
-    // Update the description when you apply this power.
-    @Override
     public void updateDescription() {
-        if(amount > 1){
-            this.description = DESCRIPTIONS[0] + "#b"+amount + DESCRIPTIONS[2];
+        if (this.amount == 1) {
+            this.description = DESCRIPTIONS[0];
+        } else {
+            this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
         }
-        this.description = DESCRIPTIONS[0] + DESCRIPTIONS[1];
+
+    }
+
+    public void onUseCard(AbstractCard card, UseCardAction action) {
+        if (card.type == AbstractCard.CardType.SKILL && !card.purgeOnUse && this.amount > 0) {
+            this.flash();
+            --this.amount;
+            if (this.amount == 0) {
+                this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, FreeSkillPower.POWER_ID));
+            }
+        }
+
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new NockedAndLoadedPower(owner, amount, basePower);
+        return new FreeSkillPower(owner, amount);
     }
 }

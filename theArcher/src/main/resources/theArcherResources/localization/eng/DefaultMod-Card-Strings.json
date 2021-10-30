@@ -73,9 +73,10 @@
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
   },
 
-  "theArcher:Cower": {
-    "NAME": "Cower",
-    "DESCRIPTION": "Lose !M! Strength. NL Gain !theArcher:SecondMagic! Dexterity."
+  "theArcher:HiddenResolve": {
+    "NAME": "Hidden Resolve",
+    "DESCRIPTION": "Draw !M! cards. NL The next Skill you play costs 0.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL The next two Skills you play costs 0."
   },
 
   "theArcher:DuckAndCover": {
@@ -229,7 +230,7 @@
 
   "theArcher:PatientShot": {
     "NAME": "Patient Shot",
-    "DESCRIPTION": "Deal damage equal to the number of cards in your your discard pile.",
+    "DESCRIPTION": "Deal damage equal to the number of cards in your discard pile.",
     "UPGRADE_DESCRIPTION": "Deal damage equal to the number of cards in your discard pile. NL Shuffle this card into your draw pile."
   },
 
@@ -246,9 +247,7 @@
 
   "theArcher:PointBlankShot": {
     "NAME": "Point Blank Shot",
-    "DESCRIPTION": "Apply 2 Vulnerable. NL Deal !D! damage. NL Gain 2 Vulnerable. NL *Fatigue !M!.",
-    "UPGRADE_DESCRIPTION": "Apply 3 Vulnerable. NL Deal !D! damage. NL Gain 3 Vulnerable. NL *Fatigue !M!.",
-    "EXTENDED_DESCRIPTION": ["When played this card decreases damage by #yFatigue."]
+    "DESCRIPTION": "You cannot play additional Attack cards this turn. NL Deal !D! damage."
   },
 
   "theArcher:EnchantedArrows": {
@@ -287,8 +286,8 @@
 
   "theArcher:QuickRelease": {
     "NAME": "Quick Release",
-    "DESCRIPTION": "When you play a shot card, draw a shot card.",
-    "UPGRADE_DESCRIPTION": "Innate. NL When you play a shot card, draw a shot card."
+    "DESCRIPTION": "When you play a shot card, put a shot card from your draw pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL When you play a shot card, put a shot card from your draw pile into your hand."
   },
 
   "theArcher:RapidShot": {

@@ -36,12 +36,12 @@ public class HeldAction extends AbstractDynamicCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheArcher.Enums.COLOR_ORANGE;
 
-    private static final int COST = 3;
+    private static final int COST = 2;
     // /STAT DECLARATION/
 
 
@@ -56,7 +56,7 @@ public class HeldAction extends AbstractDynamicCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(2);
+            upgradeBaseCost(1);
         }
 
     }

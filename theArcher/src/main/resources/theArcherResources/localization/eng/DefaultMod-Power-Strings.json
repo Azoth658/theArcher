@@ -24,6 +24,15 @@
                 ]
         },
 
+        "theArcher:FreeSkillPower": {
+                "NAME": "Free Skill Power",
+                "DESCRIPTIONS": [
+                        "Ignore energy cost on the next #ySkill you play.",
+                        "Ignore energy cost on the next #b",
+                        " #ySkills you play."
+                ]
+        },
+
         "theArcher:TwinShotPower": {
                 "NAME": "Twin Shot",
                 "DESCRIPTIONS": [
@@ -73,9 +82,9 @@
 
         "theArcher:QuickReleasePower": {
                 "NAME": "Quick Release",
-                "DESCRIPTIONS": ["When you play a shot card draw #b",
-                        " shot card.",
-                        " shot cards."]
+                "DESCRIPTIONS": ["When you play a shot card put #b",
+                        " shot card from your draw pile into your hand.",
+                        " shot cards from your draw pile into your hand."]
         },
 
         "theArcher:ReadyAndWaitingPower": {

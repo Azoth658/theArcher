@@ -55,7 +55,7 @@ public class AlwaysAhead extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_MAGIC);
+            upgradeBaseCost(1);
             initializeDescription();
         }
     }

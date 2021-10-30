@@ -1,8 +1,10 @@
 package theArcher.cards;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import theArcher.powers.FreeSkillPower;
 import theArcher.powers.NockedAndLoadedPower;
 
 import static theArcher.TheArcher.CustomTags.SHOT;
@@ -62,7 +64,7 @@ public abstract class AbstractDefaultCard extends CustomCard {
 
     @Override
     public boolean freeToPlay() {
-        return super.freeToPlay() || AbstractDungeon.player != null && AbstractDungeon.currMapNode != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && this.hasTag(SHOT) && AbstractDungeon.player.hasPower(NockedAndLoadedPower.POWER_ID) && AbstractDungeon.player.getPower(NockedAndLoadedPower.POWER_ID).amount > 0;
+        return super.freeToPlay() || AbstractDungeon.player != null && AbstractDungeon.currMapNode != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && this.hasTag(SHOT) && AbstractDungeon.player.hasPower(NockedAndLoadedPower.POWER_ID) && AbstractDungeon.player.getPower(NockedAndLoadedPower.POWER_ID).amount > 0 || AbstractDungeon.player != null && AbstractDungeon.currMapNode != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && AbstractDungeon.player.hasPower(FreeSkillPower.POWER_ID) && this.type == CardType.SKILL;
     }
 
 }

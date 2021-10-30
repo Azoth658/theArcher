@@ -78,6 +78,7 @@ public class BountyHunt extends AbstractFatigueCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(5);
+            upgradeMisc(5);
             this.fatigueAmount += FATIGUE_UPGRADE;
             this.magicNumber = fatigueAmount;
             this.baseMagicNumber = magicNumber;
